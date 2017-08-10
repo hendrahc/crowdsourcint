@@ -1,0 +1,95 @@
+<h1>This is an example</h1>
+<!--<%= session[:test_set] %>
+<%= session[:subtask] %>
+<%= session[:first] %>-->
+
+<br>
+
+<div id="test_image">
+	<%= link_to image_tag('Training/train_1.jpg'), '#' %>
+</div>
+
+
+<div id = "q1">
+    <hr>
+    <p>
+    Would you <b>like to visit</b> this place?
+    </p>
+    <i>Please select <b>one</b> of the following options.</i>
+
+    <div id="slider-Attractiveness"></div>
+    <table style="width:100%">
+        <tr>
+            <td style="text-align:left" width="12.5%">Extremely unlikely</td>
+            <td style="text-align:center" >Unlikely</td>
+            <td style="text-align:center" width="25%">Neutral</td>
+            <td style="text-align:center" width="25%">Likely</td>
+            <td style="text-align:right" width="12.5%">Extremely likely</td>
+        </tr>
+    </table>
+</div>
+
+<div id="q2" hidden>
+    <hr>
+    <p>
+    Are you <b>familiar</b> with this place?
+      <label class="btn btn-default"><input type="radio" name="familiarity" value="yes">Yes</label>
+      <label class="btn btn-default"><input type="radio" name="familiarity" value="no">No</label>
+    </p>
+    <i>Please answer yes if you are familiar with this place, otherwise answer no.</i>
+</div>
+
+<div id = "q3" hidden>
+    <hr>
+    <p>
+    How <b>unique</b> is this place?
+    </p>
+    <i>Please select <b>one</b> of the following options.</i>
+
+    <div id="slider-Uniqueness"></div>
+    <table style="width:100%">
+        <tr>
+            <td style="text-align:left" width="12.5%">I frequently see something like this</td>
+            <td style="text-align:center" >Ordinary</td>
+            <td style="text-align:center" width="25%">Neutral</td>
+            <td style="text-align:center" width="25%">Unique</td>
+            <td style="text-align:right" width="12.5%">I've never seen anything like this</td>
+        </tr>
+    </table>
+</div>
+
+<div id="q4" hidden>
+    <hr>
+    <p>
+    Do you consider this place <b>friendly</b>?
+        <label class="btn btn-default"><input type="radio" name="friendliness" value="yes">Yes</label>
+        <label class="btn btn-default"><input type="radio" name="friendliness" value="no">No</label>
+    </p>
+    <i>Please answer yes if you think this place is friendly for you, otherwise answer no.</i>
+</div>
+
+<div id="q5" hidden>
+    <hr>
+    <p>
+    How does this place make you <b>feel</b>?
+    </p>
+    <i>To answer this, please <b>move the mouse pointer inside the box</b> which contains a face picture. The facial expression will change according to the pointer’s position (for example, move it to the right to make the face happier). Click whenever the facial expression best matches your feeling.
+</i>
+    <div class="offset5">
+        <div id="affectchanger_div" hidden><input type="button" id="affectchanger" style="width:100px" class="btn btn-default" value="Change"></div>
+        <canvas id="affect" width="100px" height="100px" style="border:0; padding:0;">
+        </canvas>
+    </div>
+</div>
+
+<div id="golden_q" hidden>
+</div>
+
+<input id="options" value="Bicycle|Canal/River|Building" type="hidden" />
+<input id="checkimage" value="1" type="hidden" />
+
+<div class="buttons" id="next_btn" hidden>
+<div><i>After you have answered all the questions, click Next. <br> You <b>cannot change</b> your answers after you click Next!</i></div><br>
+<%= link_to "Next", ready_part1_path, class: "btn btn-large btn-primary" %></div>
+<div id="thisistraining"></div>
+

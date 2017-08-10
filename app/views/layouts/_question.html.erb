@@ -1,0 +1,67 @@
+<div id="start_time"></div>
+
+<div id = "q1">
+    <hr>
+    <p>
+    Would you <b>like to visit</b> this place?
+    </p>
+
+    <div id="slider-Attractiveness"></div>
+    <table style="width:100%">
+        <tr>
+            <td style="text-align:left" width="12.5%">Extremely unlikely</td>
+            <td style="text-align:center" >Unlikely</td>
+            <td style="text-align:center" width="25%">Neutral</td>
+            <td style="text-align:center" width="25%">Likely</td>
+            <td style="text-align:right" width="12.5%">Extremely likely</td>
+        </tr>
+    </table>
+</div>
+
+<div id="q2" hidden>
+    <hr>
+    <p>
+    Are you <b>familiar</b> with this place?
+      <label class="btn btn-default"><input type="radio" name="familiarity" value="yes">Yes</label>
+      <label class="btn btn-default"><input type="radio" name="familiarity" value="no">No</label>
+    </p>
+</div>
+
+<div id = "q3" hidden>
+    <hr>
+    <p>
+    How <b>unique</b> is this place?
+    </p>
+
+    <div id="slider-Uniqueness"></div>
+    <table style="width:100%">
+        <tr>
+            <td style="text-align:left" width="12.5%">I frequently see something like this</td>
+            <td style="text-align:center" >Ordinary</td>
+            <td style="text-align:center" width="25%">Neutral</td>
+            <td style="text-align:center" width="25%">Unique</td>
+            <td style="text-align:right" width="12.5%">I've never seen anything like this</td>
+        </tr>
+    </table>
+</div>
+
+<div id="q4" hidden>
+    <hr>
+    <p>
+    Do you consider this place <b>friendly</b>?
+        <label class="btn btn-default"><input type="radio" name="friendliness" value="yes">Yes</label>
+        <label class="btn btn-default"><input type="radio" name="friendliness" value="no">No</label>
+    </p>
+</div>
+
+<div id="q5" hidden>
+    <hr>
+    <p>
+    How does this place make you <b>feel</b>?
+    </p>
+    <div class="offset4">
+        <div id="affectchanger_div" hidden><input type="button" id="affectchanger" style="width:100px" class="btn btn-default" value="Change"></div>
+        <canvas id="affect" width="100px" height="100px" style="border:0; padding:0;">
+        </canvas>
+    </div>
+</div>

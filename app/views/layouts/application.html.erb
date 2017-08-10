@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %> | Urban Attractiveness Evaluation Survey</title>
+
+<%= javascript_include_tag "external/firebase" %>
+
+  <%= stylesheet_link_tag "custom", :media => "all"%>
+  <%= stylesheet_link_tag "bootstrap/bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag "jquery-ui.min", :media => "all" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "bootstrap/bootstrap" %>
+  <%= javascript_include_tag "external/jquery/jquery" %>
+  <%= javascript_include_tag "jquery-ui.min" %>
+  <%= javascript_include_tag "scales" %>
+  <%= javascript_include_tag "buttons" %>
+
+    <%= javascript_include_tag "external/jquery/jquery.mobile-1.1.0.min" %>
+    <%= javascript_include_tag "external/jquery/jquery.ui.affectbutton" %>
+    <%= javascript_include_tag "external/jquery/jquery.ui.affectbutton.mobile" %>
+
+
+  <%= render 'layouts/shim' %> 
+</head>
+<body>
+	<%= render 'layouts/header' %> 
+	<div class="container">
+		<%= yield %>
+		<%= render 'layouts/footer' %>
+		
+	</div>
+</body>
+</html>
