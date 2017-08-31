@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   post 'crowdsourceuser' => 'users#crowdsourceuser'
   get 'newuser' => 'users#new'
-  post 'newuser' => 'users#create'
+  get 'invalid' => 'users#invalid'
+  #post 'newuser' => 'users#create'
   get 'about' => 'pages#about'
 
   get 'intro_part1' => 'pages#intro_part1'
@@ -37,7 +38,7 @@ Rails.application.routes.draw do
   get 'content' => 'users#content'
   get 'contentanswer' => 'users#contentanswer'
 
-  get 'end' => 'pages#end'
+  get 'endtask' => 'pages#endtask'
   get 'endwrong' => 'pages#endwrong'
   get 'logout' => 'pages#logout'
 

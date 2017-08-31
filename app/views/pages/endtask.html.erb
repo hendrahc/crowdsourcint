@@ -1,0 +1,15 @@
+<h1>Well Done!!</h1>
+
+<p>You have reached the end of the task. Thank you for taking part in the test! :) </p>
+
+
+<p>To claim your reward, please input this code to the Mechanical Turk:</p>
+<h2><%= session[:token_out] %><h2>
+
+<p>
+<% if session[:vcode].nil? %>
+	
+<% else %>
+	<%= "Your code : " + session[:vcode] %>
+<% end %>
+</p>

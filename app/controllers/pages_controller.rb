@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def intro_part1
-      @title = "Instructions - Part 1"
+      @title = "Instructions"
   end
 
   def intro_part2
@@ -41,8 +41,17 @@ class PagesController < ApplicationController
     @title = "Contact"
   end
 
-  def end
+  def endtask
     @title = "End"
+
+    if session[:userid]
+        @user = User.find(session[:userid])
+        session[:token_out] = @user.name
+        @user.end_time = Time.now.strftime("%I:%M:%S %z")
+        @user.save
+
+        session[:userid] = nil
+    end
   end
 
   def golden
@@ -95,7 +104,9 @@ class PagesController < ApplicationController
   end
 
   def ready_part1
-    @title = "Begin Part 1"
+    @title = "Begin"
+    session[:loc_num] = '0';
+    session[:part] = 2
   end
 
   def ready_part2
@@ -105,12 +116,12 @@ class PagesController < ApplicationController
   end
 
   def totraining_part1
-    @title = "Example - Part 1"
+    @title = "Example"
     session[:training] = nil
   end
 
   def training_part1
-      @title = "Example - Part 1"
+      @title = "Example"
       session[:training] = nil
   end
 

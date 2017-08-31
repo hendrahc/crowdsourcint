@@ -26,11 +26,18 @@ class ScoresController < ApplicationController
   end
 
   def show_part2
-      @title = "Task - Part 2"
+      @title = "Task"
       if session[:loc_num].to_i < session[:locs].length
         @score = Score.new
         #set image to be shown
         @loc_id = session[:locs][(session[:loc_num].to_i)].to_i
+
+        @checkimage=0
+        if(@loc_id==9999)
+            @checkimage=1
+            @options = "Building|Train|Sky"
+        end
+
         @imgs = Image.where(loc_id: @loc_id).ids
         @img1 = Image.find(@imgs[0])
         @img2 = Image.find(@imgs[1])
@@ -38,7 +45,7 @@ class ScoresController < ApplicationController
         @img4 = Image.find(@imgs[3])
         @log_code = "2|"+@loc_id.to_s+"|"+session[:userid].to_s;
       else
-         redirect_to end_path
+         redirect_to endtask_path
       end
     end
 

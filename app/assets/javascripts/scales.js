@@ -56,10 +56,10 @@ $(function() {
     $("#golden_q").ready(function(){
         if($("#checkimage").val() == 1){
             $("#golden_q").append($("<hr>"));
-            $("#golden_q").append($("<p>Which of the following <b>objects</b> appear in this image? </p>"));
+            $("#golden_q").append($("<p>Which of the following <b>objects</b> appear in the first (left-most) image? </p>"));
 
             if($("#thisistraining").length!=0){
-                $("#golden_q").append($("<i>Please check which objects appear in the image. You may choose more than one options.</i><br>"));
+                $("#golden_q").append($("<i>Please check which objects appear in the image. You may choose <b>more than one</b> options.</i><br>"));
             }
 
             var options = $("#options").val();

@@ -1,9 +1,16 @@
 <div class="header">
 
-<% if request.path != "/newuser" && request.path != "" %>
+<% if request.path != "/endtask" %>
+    <% if session[:token_out]%>
+        <% controller.redirect_to endtask_path %>
+     <% end %>
+<% end %>
+
+<% if request.path != "/newuser" && request.path != "/invalid" && request.path != "/endtask" && request.path != "" %>
     <% if !session[:userid]%>
         <% controller.redirect_to newuser_path %>
      <% end %>
+
 <% end %>
 
 </div>

@@ -5,8 +5,13 @@
 
 <br>
 
-<div id="test_image">
-	<%= link_to image_tag('Training/train_1.jpg'), '#' %>
+<div id="test_image" class="container">
+    <div class="row">
+        <%= link_to image_tag('Training/train_1.jpg',class:'col-sm-3',style: 'width:24%;height:auto;'), '#' %>
+        <%= link_to image_tag('Training/train_2.jpg',class:'col-sm-3',style: 'width:24%;height:auto;'), '#' %>
+        <%= link_to image_tag('Training/train_3.jpg',class:'col-sm-3',style: 'width:24%;height:auto;'), '#' %>
+        <%= link_to image_tag('Training/train_4.jpg',class:'col-sm-3',style: 'width:24%;height:auto;'), '#' %>
+    </div>
 </div>
 
 
@@ -42,7 +47,7 @@
 <div id = "q3" hidden>
     <hr>
     <p>
-    How <b>unique</b> is this place?
+    How <b>unique</b> is this place in Netherlands?
     </p>
     <i>Please select <b>one</b> of the following options.</i>
 
@@ -85,7 +90,7 @@
 <div id="golden_q" hidden>
 </div>
 
-<input id="options" value="Bicycle|Canal/River|Building" type="hidden" />
+<input id="options" value="Car|Canal/River|Building" type="hidden" />
 <input id="checkimage" value="1" type="hidden" />
 
 <div class="buttons" id="next_btn" hidden>
