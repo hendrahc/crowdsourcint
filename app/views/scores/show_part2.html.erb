@@ -21,6 +21,7 @@
   <%= f.hidden_field :part, :value => 2 %>
   <%= f.hidden_field :loc_id, :value => session[:locs][(session[:loc_num].to_i)].to_i %>
   <%= f.hidden_field :user_id, :value => session[:userid].to_s %>
+  <%= f.hidden_field :golden_answer, :id => "golden_answer" %>
 
   <%= f.hidden_field :pleasure, :id => "pleasure" %>
   <%= f.hidden_field :arousal, :id => "arousal" %>
